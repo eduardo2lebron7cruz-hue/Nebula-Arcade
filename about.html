@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca de — Nébula Arcade</title>
+  <meta name="description" content="Sobre el proyecto Nébula Arcade y su arquitectura técnica.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a href="index.html" class="logo">NÉBULA<span>·</span>ARCADE</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu-principal">☰</button>
+      <nav aria-label="Navegación principal">
+        <ul class="nav__lista" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html" aria-current="page">Acerca de</a></li>
+          <li><a href="catalog.html">Catálogo</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="contenedor">
+        <h1 class="seccion__titulo">Acerca del proyecto</h1>
+        <p class="seccion__intro">
+          Nébula Arcade es un proyecto académico centrado en videojuegos, desarrollado para
+          practicar HTML5 semántico, CSS externo avanzado y transformación de datos XML con XSLT.
+          Todo el catálogo se genera del lado del cliente: no hay backend ni base de datos.
+        </p>
+
+        <h2 class="seccion__titulo" style="margin-top:2.5rem;">Arquitectura técnica</h2>
+        <div class="tabla-wrap">
+          <table>
+            <caption class="sr-only">Componentes técnicos del sitio y su función</caption>
+            <thead>
+              <tr>
+                <th scope="col">Componente</th>
+                <th scope="col">Archivo</th>
+                <th scope="col">Función</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Estructura</td>
+                <td><code>index.html, about.html, catalog.html, contact.html</code></td>
+                <td>Contenido semántico de las cuatro páginas del sitio</td>
+              </tr>
+              <tr>
+                <td>Estilos</td>
+                <td><code>css/styles.css</code></td>
+                <td>Variables CSS, Grid/Flexbox, responsive y animaciones</td>
+              </tr>
+              <tr>
+                <td>Datos</td>
+                <td><code>data/datos.xml</code></td>
+                <td>Ocho registros de videojuegos con sus atributos</td>
+              </tr>
+              <tr>
+                <td>Validación</td>
+                <td><code>data/datos.dtd</code></td>
+                <td>Define y valida la estructura obligatoria del XML</td>
+              </tr>
+              <tr>
+                <td>Transformación</td>
+                <td><code>data/catalogo.xsl</code></td>
+                <td>Convierte el XML en tarjetas HTML de catálogo</td>
+              </tr>
+              <tr>
+                <td>Interactividad</td>
+                <td><code>js/catalog.js, js/contacto.js, js/main.js</code></td>
+                <td>Carga del XSLT, filtros por género y validación de formulario</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="seccion__titulo" style="margin-top:2.5rem;">Sobre el autor</h2>
+        <p>
+          Proyecto desarrollado por Justo Eduardo, estudiante de Ingeniería en Sistemas, como entrega
+          para la asignatura de diseño web. Publicado en GitHub Pages como parte del
+          proceso de aprendizaje de estructuración y transformación de datos web.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__contenido">
+      <p>© 2026 Nébula Arcade — Proyecto académico de Justo Eduardo.</p>
+      <nav aria-label="Enlaces del pie de página">
+        <a href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
